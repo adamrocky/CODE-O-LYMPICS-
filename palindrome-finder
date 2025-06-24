@@ -1,0 +1,39 @@
+Problem Statement
+Given a sentence composed of words separated by spaces, find the longest word that is a palindrome. If multiple palindromic words share the maximum length, return the first occurrence. If no palindromes exist, return "NO PALINDROME".
+
+A palindrome reads the same backward as forward (e.g., madam, kayak, racecar).
+
+Input Format
+A single line of input containing a sentence with 1 to 100 words.
+
+Each word consists of lowercase letters only (no punctuation or numbers).
+
+Output Format
+Print the longest palindromic word.
+
+If none exist, print "NO PALINDROME".
+
+Constraints
+Each word has a maximum length of 100 characters.
+The entire sentence length does not exceed 10,000 characters.
+Case-sensitive: Input is strictly lowercase.
+
+Examples
+Sample Input	Sample Output
+level civic kayak madam racecar apple banana	racecar
+hello world openai chatgpt	NO PALINDROME
+Explanation
+First Example:
+
+Palindromic words: level, civic, kayak, madam, racecar.
+Longest: racecar (length 7).
+
+Second Example:
+No palindromic words → "NO PALINDROME".
+
+Solution Approach
+Split the Sentence: Separate words by spaces.
+
+Check Palindromes: For each word, verify if it matches its reverse.
+Track Longest: Maintain the longest palindrome encountered, prioritizing the first if ties occur.
+Edge Handling: Return "NO PALINDROME" if no valid word is found.
