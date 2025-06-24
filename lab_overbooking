@@ -1,0 +1,89 @@
+Problem Statement
+UITM's I-LabBooker system allows students to book computer lab slots. Due to a bug during an upgrade, some lab slots were overbooked (exceeded their capacity). Your task is to identify which lab time slots are overbooked and by how many students.
+
+Input Format
+The first line contains an integer T (≤ 10), the number of test cases.
+
+For each test case:
+
+The first line contains two integers:
+
+S (≤ 1000): Number of booking entries.
+C (≤ 500): Maximum capacity per lab slot.
+
+The next S lines contain booking records in the format:
+LabName TimeSlot StudentID
+LabName: String (no spaces, max length 20).
+TimeSlot: 24-hour format "HH:MM" (e.g., "09:00").
+StudentID: Alphanumeric string (e.g., "2022345A").
+
+Output Format
+For each test case:
+Print Case #X: where X is the test case number.
+For each overbooked lab slot, print:
+LabName TimeSlot: Overbooked by Y student(s)
+(Sorted by LabName, then TimeSlot)
+
+If no overbooking, print:
+No overbooking detected
+
+Constraints
+Each student can book only once per lab slot (no duplicates).
+
+Lab names and time slots are case-sensitive.
+
+Examples
+Example 1: Simple Overbooking
+
+Input:
+1
+6 2
+LabA 09:00 A001
+LabA 09:00 A002
+LabA 09:00 A003
+LabB 10:00 A004
+LabB 10:00 A005
+LabB 10:00 A006
+
+Output:
+Case #1:
+LabA 09:00: Overbooked by 1 student(s)
+LabB 10:00: Overbooked by 1 student(s)
+Example 2: No Overbooking
+
+Input:
+1
+5 3
+LabX 08:30 B101
+LabX 08:30 B102
+LabX 08:30 B103
+LabY 11:00 B104
+LabY 11:00 B105
+
+Output:
+Case #1:
+No overbooking detected
+Example 3: Multiple Test Cases
+
+Input:
+2
+7 2
+LabC 13:00 C111
+LabC 13:00 C112
+LabC 13:00 C113
+LabD 14:00 C114
+LabD 14:00 C115
+LabD 14:00 C116
+LabC 13:00 C117
+4 2
+LabZ 15:30 Z001
+LabZ 15:30 Z002
+LabZ 15:30 Z003
+LabZ 16:00 Z004
+
+Output:
+Case #1:
+LabC 13:00: Overbooked by 2 student(s)
+LabD 14:00: Overbooked by 1 student(s)
+Case #2:
+LabZ 15:30: Overbooked by 1 student(s)
