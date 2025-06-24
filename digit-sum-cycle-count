@@ -1,0 +1,36 @@
+Question 1
+Problem Statement
+Given a two-digit integer N (from 0 to 99), perform the following operation repeatedly until you return to the original number:
+Take the last digit of the current number.
+Calculate the sum of all digits in the number.
+
+Form a new number by:
+Using the last digit of the current number as the tens digit.
+Using the last digit of the sum as the units digit
+Count how many steps (cycles) it takes to return to the original number N.
+Special Case: If the input is a single-digit number (e.g., 7), treat it as a two-digit number with a leading zero (07).
+
+Example 1
+Input: 26
+Explanation:
+
+26 → 2+6=8 → 68 (step 1)
+68 → 6+8=14 → 84 (step 2)
+84 → 8+4=12 → 42 (step 3)
+42 → 4+2=6 → 26 (step 4, back to original)
+Output: 4
+
+Example 2
+Input: 39
+Output: 12
+(The cycle takes 12 steps to return to 39.)
+
+Example 3
+Input: 0
+Output: 1
+(0 → 0 in one step.)
+
+Constraints
+0 ≤ N ≤ 99
+Time Limit: 1 second
+Memory Limit: 256 MB
